@@ -1,35 +1,53 @@
-import {Suspense} from 'react'
+import {Suspense, useState} from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 
 import Island from '../models/Island';
 import Sky from '../models/Sky';
 import Bird from '../models/Bird';
-import Chimera from '../models/Chimera';
+import Plane from '../models/Plane';
 
 {/* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
     POPUP
 </div> */}
 const Home = () => {
+    const [isRotating, setIsRotating] = useState(false);
+
+
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
-        let screenPosition =[0, -2.5, -43]; 
-        let rotation = [.5, 3.5, 0];
+        let screenPosition =[0, -0.5, -31.5]; 
+        let rotation = [.1, 3.0, 0];
 
         if(window.innerWidth < 768) {
-            screenScale = [1.8, 1.8, 1.8];
+            screenScale = [0.9, 0.9, 0.9];
         } else {
-            screenScale = [10, 10, 10];
+            screenScale = [7, 7, 7];
         }
         return [screenScale, screenPosition, rotation]; //rotation
     }
 
+    const adjustPlaneForScreenSize = () => {
+        let screenScale, screenPosition;
+
+        if(window.innerWidth < 768) {
+            screenScale = [1.5, 1.5, 1.5];
+            screenPosition = [0, -1.5, 0]
+        } else {
+            screenScale = [3, 3, 3];
+            screenPosition = [0, -4, -4]
+        }
+        return [screenScale, screenPosition]; //rotation
+    }
+
     const [islandScale, islandPosition, islandRotation]  = adjustIslandForScreenSize();
-//islandRotation
+    const [planeScale, planePosition] = 
+        adjustPlaneForScreenSize();
+
   return (
     <section className="w-full h-screen relative">
         <Canvas 
-        className="w-full h-screen bg-trasnparent"
+        className={`w-full h-screen bg-trasnparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab' }`}
         camera={{ near: 0.1, far: 1000  }}
         >
            <Suspense fallback={<Loader />}>
@@ -44,8 +62,15 @@ const Home = () => {
                 position={islandPosition}
                 scale={islandScale}
                 rotation={islandRotation}
+                isRotating={isRotating}
+                setIsRotating={setIsRotating}
                 />
-                <Chimera />
+                <Plane 
+                isRotating={isRotating}
+                planeScale={planeScale}
+                planePosition={planePosition}
+                rotation={[0,20,0]}
+                />
             </Suspense> 
         </Canvas>
     </section>
