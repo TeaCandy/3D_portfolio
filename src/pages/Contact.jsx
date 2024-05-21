@@ -36,7 +36,7 @@ const Contact = () => {
               type="email"
               name="email"
               className="input"
-              placeholder="valid email address"
+              placeholder="Valid email address"
               required
               value={form.email}
               onChange={handleChange}
