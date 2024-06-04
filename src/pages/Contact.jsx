@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useState } from 'react'
+import React, { Suspense, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 import Deer from '../models/Deer';
@@ -6,42 +6,44 @@ import Loader from '../components/Loader';
 
 const Contact = () => {
   const formRef = useRef(null);
-  const [form, setForm] = useState({ name: '', email: '', message: ''})
+  const [form, setForm] = useState({ name: '', email: '', message: ''});
   const [isLoading, setIsLoading] = useState(false);
+  const [currentAnimation, setCurrentAnimation] = useState('Arm_Deer|Idle_1');
 
   const handleChange = (e) => {
-    setForm({...form, [e.target.name]: e.target.value})
+    setForm({...form, [e.target.name]: e.target.value});
   };
   
-  const handleFocus = () => {
-  };
-  const handleBlur = () => {};
+  const handleFocus = () => setCurrentAnimation('Arm_Deer|Walk_F_IP');
+  
+  const handleBlur = () => setCurrentAnimation('Arm_Deer|Idle_1');
   
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setCurrentAnimation('Arm_Deer|Jump_Run_RM');
 
     emailjs.send(
-     import.meta.env.VITE_APP_EMAILJS_SERVICE_ID, 
-     import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-     {
-      from_name: form.name,
-      to_name: "Candace",
-      from_email: form.email,
-      to_email: 'ryan.candace26@gmail.com',
-      message: form.message
-     },
-     import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID, 
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        to_name: "Candace",
+        from_email: form.email,
+        to_email: 'ryan.candace26@gmail.com',
+        message: form.message
+      },
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(() => {
       setIsLoading(false);
       //TODO: send success alert, hide alert
-
       setForm({name: '', email: '', message: ''});
     }).catch((error) => {
       setIsLoading(false);
+      setCurrentAnimation('Arm_Deer|Idle_1');
       console.log(error);
       // error message if there is one
-    })
+    });
   };
 
   return (
@@ -117,20 +119,20 @@ const Contact = () => {
             far: 1000
           }}
         >
-          <directionalLight intensity={2.5} position={[0, 0, 1]}/>
-          <ambientLight  intensity={0.5}/>
+          <directionalLight intensity={2.5} position={[0, 0, 1]} />
+          <ambientLight intensity={0.5} />
           <Suspense fallback={<Loader />}>
             <Deer 
-            position={[0.5, 0.35, 0]}
-            rotation={[12.6, -0.6, 0]}
-            scale={[0.5, 0.5, 0.5]}
+              currentAnimation={currentAnimation}
+              position={[0.5, 0.35, 0]}
+              rotation={[12.6, -0.6, 0]}
+              scale={[0.5, 0.5, 0.5]}
             />
           </Suspense>
-
         </Canvas>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

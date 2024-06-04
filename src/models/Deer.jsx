@@ -17,7 +17,12 @@ const Deer = ({ currentAnimation, ...props}) => {
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
+    console.log(actions)
+    Object.values(actions).forEach((action) => action.stop());
 
+    if(actions[currentAnimation]){
+      actions[currentAnimation].play();
+    }
   }, [actions, currentAnimation])
 
   return (
@@ -40,42 +45,7 @@ const Deer = ({ currentAnimation, ...props}) => {
                   </group>
                 </group>
                 <group name="Deer_F_7" />
-                <group name="Deer_F_1" position={[-5.596, 0, -0.421]} rotation={[0, 0.698, 0]}>
-                  <mesh
-                    name="Deer_F_1_Deer_Stag_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_1_Deer_Stag_0.geometry}
-                    material={materials.Deer_Stag}
-                  />
-                </group>
-                <group name="Deer_blood_1" position={[-6.419, 0, -3.105]} rotation={[0, 0.653, 0]}>
-                  <mesh
-                    name="Deer_blood_1_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_blood_1_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_2" position={[0, 0, -3.358]}>
-                  <mesh
-                    name="Deer_F_2_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_2_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_3" position={[-4.24, 0, -4.577]} rotation={[0, 0.574, 0]}>
-                  <mesh
-                    name="Deer_F_3_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_3_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
+                
                 <group name="Deer_F_4" position={[2.061, 0, -2.948]} rotation={[0, -0.34, 0]}>
                   <mesh
                     name="Deer_F_4_Deer_Stag001_0"
@@ -83,116 +53,10 @@ const Deer = ({ currentAnimation, ...props}) => {
                     receiveShadow
                     geometry={nodes.Deer_F_4_Deer_Stag001_0.geometry}
                     material={materials['Deer_Stag.001']}
+                    
                   />
                 </group>
-                <group name="Deer_F_5" position={[-3.912, 0, -1.773]} rotation={[0, 0.663, 0]}>
-                  <mesh
-                    name="Deer_F_5_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_5_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_6" position={[3.934, 0, -1.884]} rotation={[0, -0.612, 0]}>
-                  <mesh
-                    name="Deer_F_6_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_6_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_8" position={[5.563, 0, -0.687]} rotation={[0, -0.677, 0]}>
-                  <mesh
-                    name="Deer_F_8_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_8_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_9" position={[2.008, 0, -5.576]} rotation={[0, -0.275, 0]}>
-                  <mesh
-                    name="Deer_F_9_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_9_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_10" position={[0.066, 0, -6.343]}>
-                  <mesh
-                    name="Deer_F_10_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_10_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_11" position={[-2.108, 0, -5.57]} rotation={[0, 0.394, 0]}>
-                  <mesh
-                    name="Deer_F_11_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_11_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_12" position={[4.18, 0, -4.521]} rotation={[0, -0.497, 0]}>
-                  <mesh
-                    name="Deer_F_12_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_12_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_13" position={[-6.419, 0, -3.105]} rotation={[0, 0.653, 0]}>
-                  <mesh
-                    name="Deer_F_13_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_13_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_14" position={[6.13, 0, -3.045]} rotation={[0, -0.694, 0]}>
-                  <mesh
-                    name="Deer_F_14_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_14_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_F_15" position={[-2.15, 0, -2.926]} rotation={[0, 0.443, 0]}>
-                  <mesh
-                    name="Deer_F_15_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_F_15_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_Ice_1" position={[-3.912, 0, -1.773]} rotation={[0, 0.663, 0]}>
-                  <mesh
-                    name="Deer_Ice_1_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_Ice_1_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
-                <group name="Deer_Ice_2" position={[-3.912, 0, -1.773]} rotation={[0, 0.663, 0]}>
-                  <mesh
-                    name="Deer_Ice_2_Deer_Stag001_0"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Deer_Ice_2_Deer_Stag001_0.geometry}
-                    material={materials['Deer_Stag.001']}
-                  />
-                </group>
+         
                 <group name="Deer_Moss_1" position={[2.061, 0, -2.948]} rotation={[0, -0.34, 0]}>
                   <mesh
                     name="Deer_Moss_1_Deer_Stag001_0"
