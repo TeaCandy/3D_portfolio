@@ -3,12 +3,16 @@ import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 import Deer from '../models/Deer';
 import Loader from '../components/Loader';
+import useAlert from '../hooks/useAlert';
+import Alert from '../components/Alert';
 
 const Contact = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: '', email: '', message: ''});
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState('Arm_Deer|Idle_1');
+
+  // const { alert, showAlert, hideAlert} = useAlert;
 
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value});
@@ -21,7 +25,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setCurrentAnimation('Arm_Deer|Jump_Run_RM');
+    setCurrentAnimation('Arm_Deer|Run_F_IP');
 
     emailjs.send(
       import.meta.env.VITE_APP_EMAILJS_SERVICE_ID, 
@@ -36,18 +40,29 @@ const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(() => {
       setIsLoading(false);
-      //TODO: send success alert, hide alert
-      setForm({name: '', email: '', message: ''});
+      // showAlert({ show: true, text: 'Message sent successfully!', type: 'success' })
+
+      setTimeout(() => {
+        hideAlert();
+        setCurrentAnimation('Arm_Deer|Idle_1')
+        setForm({name: '', email: '', message: ''});
+      },[3000])
+
+
     }).catch((error) => {
       setIsLoading(false);
       setCurrentAnimation('Arm_Deer|Idle_1');
       console.log(error);
-      // error message if there is one
-    });
+      // showAlert({ show: true, text: 'Something went wrong...', type: 'danger' })
+    })
   };
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
+      {/* {alert.show && <Alert {...alert} />}
+      <Alert {...alert} /> */}
+
+
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">
           Get in Touch
@@ -124,9 +139,9 @@ const Contact = () => {
           <Suspense fallback={<Loader />}>
             <Deer 
               currentAnimation={currentAnimation}
-              position={[0.5, 0.35, 0]}
+              position={[1, -2.9, 0]}
               rotation={[12.6, -0.6, 0]}
-              scale={[0.5, 0.5, 0.5]}
+              scale={[2, 2, 2]}
             />
           </Suspense>
         </Canvas>

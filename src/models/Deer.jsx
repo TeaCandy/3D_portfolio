@@ -17,7 +17,6 @@ const Deer = ({ currentAnimation, ...props}) => {
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
-    console.log(actions)
     Object.values(actions).forEach((action) => action.stop());
 
     if(actions[currentAnimation]){
@@ -46,17 +45,17 @@ const Deer = ({ currentAnimation, ...props}) => {
                 </group>
                 <group name="Deer_F_7" />
                 
-                <group name="Deer_F_4" position={[2.061, 0, -2.948]} rotation={[0, -0.34, 0]}>
+                {/* <group name="Deer_F_4" position={[2.061, 0, -2.948]} rotation={[0, -0.34, 0]}>
                   <mesh
                     name="Deer_F_4_Deer_Stag001_0"
                     castShadow
                     receiveShadow
                     geometry={nodes.Deer_F_4_Deer_Stag001_0.geometry}
                     material={materials['Deer_Stag.001']}
-                    
+                    skeleton={nodes.Deer_F_4_Deer_Stag001_0.skeleton}
                   />
-                </group>
-         
+                </group> */}
+{/*          
                 <group name="Deer_Moss_1" position={[2.061, 0, -2.948]} rotation={[0, -0.34, 0]}>
                   <mesh
                     name="Deer_Moss_1_Deer_Stag001_0"
@@ -74,7 +73,7 @@ const Deer = ({ currentAnimation, ...props}) => {
                     geometry={nodes.Deer_Moss_2_Deer_Stag001_0.geometry}
                     material={materials['Deer_Stag.001']}
                   />
-                </group>
+                </group> */}
               </group>
             </group>
           </group>
