@@ -12,7 +12,7 @@ import {
     linkedin,
     mongodb,
     motion,
-    mui,
+    docker,
     nextjs,
     nodejs,
     pricewise,
@@ -23,13 +23,44 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript, 
+    unity
 } from "../assets/icons";
 
 export const skills = [
     {
+        imageUrl: github,
+        name: "GitHub",
+        type: "Version Control",
+    },
+    {
+        imageUrl: nodejs,
+        name: "Node.js",
+        type: "Backend",
+    },
+    {
+        imageUrl: javascript,
+        name: "JavaScript",
+        type: "Frontend",
+    },
+    {
+        imageUrl: git,
+        name: "Git",
+        type: "Version Control",
+    },
+    {
+        imageUrl: nextjs,
+        name: "Next.js",
+        type: "Frontend",
+    },
+    {
         imageUrl: css,
         name: "CSS",
+        type: "Frontend",
+    },
+    {
+        imageUrl: react,
+        name: "React",
         type: "Frontend",
     },
     {
@@ -38,23 +69,8 @@ export const skills = [
         type: "Backend",
     },
     {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
         imageUrl: html,
         name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
         type: "Frontend",
     },
     {
@@ -62,30 +78,15 @@ export const skills = [
         name: "MongoDB",
         type: "Database",
     },
-    // {
-    //     imageUrl: unity,
-    //     name: "Unity",
-    //     type: "Gamedev",
-    // },
-    // {
-    //     imageUrl: docker,
-    //     name: "Docker",
-    //     type: "Database",
-    // },
     {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
+        imageUrl: unity,
+        name: "Unity2D",
+        type: "Gamedev",
     },
     {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
+        imageUrl: docker,
+        name: "Docker",
+        type: "Database",
     },
     // {
     //     imageUrl: aws,

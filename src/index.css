@@ -194,3 +194,62 @@ body:has(.card[data-color="green"]:hover) {
   box-shadow: 0.6vmin 0.6vmin #d84f8d, 1vmin 1vmin #f5589e, 1vmin 1vmin #f5589e,
     0.65vmin 1vmin #f5589e, 1vmin 0.65vmin #f5589e; /* Adjusted shadows */
 }
+
+/* Styles for the icon container, hover effect, and the box */
+.block-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f9a8d4; /* Example background color */
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2); /* Initial deeper shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-front {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.block-container:hover .btn-back,
+.block-container:hover .btn-front {
+  transform: scale(1.1); /* Enlarges the icon on hover */
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+}
+
+/* Tooltip styles */
+.skill-tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the icon */
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.block-container:hover .skill-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
