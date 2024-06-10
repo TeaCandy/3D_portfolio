@@ -24,7 +24,10 @@ import {
     tailwindcss,
     threads,
     typescript, 
-    unity
+    unity,
+    aseprite,
+    graphql,
+    vegaspro
 } from "../assets/icons";
 
 export const skills = [
@@ -88,16 +91,16 @@ export const skills = [
         name: "Docker",
         type: "Database",
     },
-    // {
-    //     imageUrl: aws,
-    //     name: "Aws",
-    //     type: "Cloud",
-    // },
-    // {
-    //     imageUrl: graphQL,
-    //     name: "GraphQL",
-    //     type: "Database",
-    // },
+    {
+        imageUrl: aseprite,
+        name: "Aseprite",
+        type: "Gamedev",
+    },
+    {
+        imageUrl: graphql,
+        name: "GraphQL",
+        type: "Database",
+    },
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
@@ -107,7 +110,12 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
-    }
+    },
+    {
+        imageUrl: vegaspro,
+        name: "Sony Vegas Pro 14",
+        type: "Video Editing",
+    },
 ];
 
 export const experiences = [

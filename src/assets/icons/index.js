@@ -27,6 +27,9 @@ import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 import unity from './unity.svg'
+import aseprite from './aseprite.svg'
+import graphql from './graphql.svg'
+import vegaspro from './vegaspro.svg'
 
 
 export {
@@ -59,4 +62,7 @@ export {
     soundon,
     soundoff,
     unity,
+    aseprite,
+    graphql,
+    vegaspro
 }
