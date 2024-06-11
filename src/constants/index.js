@@ -1,4 +1,4 @@
-import { tea, saotg, museum, eurofins } from "../assets/images";
+import { tea, saotg, museum, eurofins, neaq } from "../assets/images";
 import {
     car,
     contact,
@@ -126,7 +126,7 @@ export const experiences = [
         iconBg: "#f79c5b",
         date: "August 2023 - Present",
         points: [
-            "Virtual and in-person academic coach and tutor for students in grades K-12th grade.",
+            "Virtual and in-person academic coach and tutor for students in grades K-12.",
             "Built strong rapport with students and their families by understanding their individual needs and goals.",
             "Specialized in helping students with their executive functioning (impression management, time management, organization, and study skills)",
         ],
@@ -151,7 +151,7 @@ export const experiences = [
         iconBg: "#0D70B7",
         date: "Nov 2022 - Feb 2023",
         points: [
-            "Lead and facilitated programming and demonstrations.",
+            "Led and facilitated programming and demonstrations.",
             "Enhanced visitors learning by describing, modeling, and promoting engagement with exhibits.",
             "Effectively interacted with children, adults, and host organization staff.",
             "Creatively operated outside the box to teach topics to a variety of audiences.",
@@ -168,16 +168,18 @@ export const experiences = [
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: tea,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        title: "Educator, Camp Counselor, & Community Programs Coordinator",
+        company_name: "The New England Aquarium",
+        icon: neaq,
+        iconBg: "#022C57",
+        date: "Sept 2013 - August 2015",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Gave formal Live Animal Presentations (LAPs) to groups of 2-300 individuals.",
+            "Worked closely with children ages 8-12 over several summers.",
+            "Facilitated public programs at community and event centers in Boston.",
+            "Presented as role model and ambassador for the Blue Planet.",
+            "Engaged with visitors at exhibits, answering questions and showcasing associated aquatic fossils and artifacts.",
+            "Team Lead for small-scale dissections" 
         ],
     },
 ];
@@ -191,12 +193,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/TeaCandy',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/candacexryan/',
     }
 ];
 
