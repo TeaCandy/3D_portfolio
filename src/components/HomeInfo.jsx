@@ -30,7 +30,7 @@ const renderContent = {
     1: (
         <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-medium-pink py-4 px-8 text-white mx-5">Hello! My name is <span className="font-semibold">Candace</span> 🌸
         <br/>
-       I am a recent grad from a full stack coding program at MIT
+       I am a recent grad from a full stack coding program at MIT. <br></br>Use your ⬅️ and ➡️ to navigate.
         </h1>
     ),
     3: (

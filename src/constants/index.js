@@ -27,7 +27,8 @@ import {
     unity,
     aseprite,
     graphql,
-    vegaspro
+    vegaspro,
+    food
 } from "../assets/icons";
 
 export const skills = [
@@ -204,10 +205,10 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: food,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
+        name: 'Full Stack GrubHub Clone',
+        description: 'Developed a web application that allows the user to browse popular restaurants in Houston, order items from their menus, and checkout with PayPal.',
         link: 'https://github.com/adrianhajdin/pricewise',
     },
     {
