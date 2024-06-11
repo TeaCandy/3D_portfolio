@@ -43,6 +43,7 @@ const renderContent = {
 }
 
 
+
 const HomeInfo = ({ currentStage }) => {
   return renderContent[currentStage] || null;
 }

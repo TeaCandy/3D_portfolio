@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 
-import planeScene from '../assets/3d/da_vinci_flying_airplane.glb';
+import planeScene from '../assets/3d/leafbird.glb';
 
 const Plane = ({ isRotating, ...props }) => {
   const gltf = useGLTF(planeScene);
@@ -11,16 +11,16 @@ const Plane = ({ isRotating, ...props }) => {
 
   useEffect(() => {
     if (isRotating) {
-      actions['Armature|speed03'].play(); // Adjust animation name based on your specific GLTF file
+      actions['Take 001'].play(); // Adjust animation name based on your specific GLTF file
     } else {
-      actions['Armature|speed03'].stop(); // Adjust animation name based on your specific GLTF file
+      actions['Take 001'].stop(); // Adjust animation name based on your specific GLTF file
     }
   }, [actions, isRotating]);
 
   return (
-    <group {...props} ref={ref}>
+    <mesh {...props} ref={ref}>
       <primitive object={scene} />
-    </group>
+    </mesh>
   );
 };
 

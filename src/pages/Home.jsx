@@ -4,7 +4,7 @@ import Loader from '../components/Loader';
 
 import Island from '../models/Island';
 import Sky from '../models/Sky';
-import Bird from '../models/Bird';
+// import Bird from '../models/Bird';
 import Plane from '../models/Plane';
 import HomeInfo from '../components/HomeInfo';
 
@@ -37,9 +37,9 @@ const Home = () => {
       };
     } else {
       return {
-        scale: [3, 3, 3],
-        position: [0, -4, -4],
-        rotation: [0, 20, 0],
+        scale: [6, 6, 6],
+        position: [0, -4.5, -4],
+        rotation: [0, 20.5, 0],
       };
     }
   };
@@ -66,7 +66,7 @@ const Home = () => {
         <directionalLight position={[1, 1, 2]} intensity={2} />
         <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
 
-        <Bird />
+        {/* <Bird /> */}
         <Sky isRotating={isRotating} />
         <Island
           position={islandPosition}
