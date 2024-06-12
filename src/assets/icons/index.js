@@ -31,6 +31,7 @@ import aseprite from './aseprite.svg'
 import graphql from './graphql.svg'
 import vegaspro from './vegaspro.svg'
 import food from './food.svg'
+import financial from './financial.svg'
 
 
 export {
@@ -66,5 +67,6 @@ export {
     aseprite,
     graphql,
     vegaspro,
-    food
+    food,
+    financial
 }

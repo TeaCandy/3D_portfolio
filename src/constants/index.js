@@ -28,7 +28,8 @@ import {
     aseprite,
     graphql,
     vegaspro,
-    food
+    food,
+    financial
 } from "../assets/icons";
 
 export const skills = [
@@ -208,42 +209,42 @@ export const projects = [
         iconUrl: food,
         theme: 'btn-back-red',
         name: 'Full Stack GrubHub Clone',
-        description: 'Developed a web application that allows the user to browse popular restaurants in Houston, order items from their menus, and checkout with PayPal.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        description: 'Developed a web application that allows the user to browse and order from popular restaurants in Houston. Includes user authentication, a database built in HygraphQL, a user-review system, and checkout services with PayPal.',
+        link: 'https://top-picks-git-capstone-candaces-projects-5d39bdf3.vercel.app/?category=all',
     },
     {
-        iconUrl: threads,
+        iconUrl: financial,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Front-End Banking App',
+        description: 'Created a stylized ATM service enabling you to make a (fake) bank account to withdraw and deposit money. It utilizes reusable Bootstrap card components, is deployed with Amazon Web Services, and locally stores all user data.',
+        link: 'https://candace-ryanbankingapplication.s3.us-east-2.amazonaws.com/gitbankingapp/index.html#/',
     },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
+    // {
+    //     iconUrl: car,
+    //     theme: 'btn-back-blue',
+    //     name: 'Car Finding App',
+    //     description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
+    //     link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+    // },
+    // {
+    //     iconUrl: snapgram,
+    //     theme: 'btn-back-pink',
+    //     name: 'Full Stack Instagram Clone',
+    //     description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
+    //     link: 'https://github.com/adrianhajdin/social_media_app',
+    // },
+    // {
+    //     iconUrl: estate,
+    //     theme: 'btn-back-black',
+    //     name: 'Real-Estate Application',
+    //     description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
+    //     link: 'https://github.com/adrianhajdin/projects_realestate',
+    // },
+    // {
+    //     iconUrl: summiz,
+    //     theme: 'btn-back-yellow',
+    //     name: 'AI Summarizer Application',
+    //     description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
+    //     link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+    // }
 ];

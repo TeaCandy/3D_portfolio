@@ -13,7 +13,7 @@ const Plane = ({ isRotating, ...props }) => {
     if (isRotating) {
       actions['Take 001'].play(); // Adjust animation name based on your specific GLTF file
     } else {
-      actions['Take 001'].stop(); // Adjust animation name based on your specific GLTF file
+      actions['Take 001'].play(); // Adjust animation name based on your specific GLTF file
     }
   }, [actions, isRotating]);
 
