@@ -32,6 +32,7 @@ import graphql from './graphql.svg'
 import vegaspro from './vegaspro.svg'
 import food from './food.svg'
 import financial from './financial.svg'
+import robo from './robo.svg'
 
 
 export {
@@ -68,5 +69,6 @@ export {
     graphql,
     vegaspro,
     food,
-    financial
+    financial, 
+    robo
 }

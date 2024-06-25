@@ -29,7 +29,8 @@ import {
     graphql,
     vegaspro,
     food,
-    financial
+    financial,
+    robo
 } from "../assets/icons";
 
 export const skills = [
@@ -213,6 +214,13 @@ export const projects = [
         link: 'https://top-picks-git-capstone-candaces-projects-5d39bdf3.vercel.app/?category=all',
     },
     {
+        iconUrl: robo,
+        theme: 'btn-back-pink',
+        name: 'AI Article Summarizer',
+        description: 'Built a web application leveraging OpenAI\'s RapidAPI, enabling users to input URLs and receive concise summaries of the linked articles. The application is developed using React, Vite, Tailwind CSS, and Redux Toolkit for efficient state management and API handling.',
+        link: 'https://cr-article-ai-summarizer.vercel.app/',
+    },
+    {
         iconUrl: financial,
         theme: 'btn-back-green',
         name: 'Front-End Banking App',
@@ -220,15 +228,8 @@ export const projects = [
         link: 'https://candace-ryanbankingapplication.s3.us-east-2.amazonaws.com/gitbankingapp/index.html#/',
     },
     // {
-    //     iconUrl: car,
-    //     theme: 'btn-back-blue',
-    //     name: 'Car Finding App',
-    //     description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-    //     link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    // },
-    // {
     //     iconUrl: snapgram,
-    //     theme: 'btn-back-pink',
+    //     theme: 'btn-back-blue',
     //     name: 'Full Stack Instagram Clone',
     //     description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
     //     link: 'https://github.com/adrianhajdin/social_media_app',
