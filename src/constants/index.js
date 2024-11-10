@@ -220,13 +220,13 @@ export const projects = [
         description: 'Built a web application leveraging OpenAI\'s RapidAPI, enabling users to input URLs and receive concise summaries of the linked articles. The application is developed using React, Vite, Tailwind CSS, and Redux Toolkit for efficient state management and API handling.',
         link: 'https://cr-article-ai-summarizer.vercel.app/',
     },
-    {
-        iconUrl: financial,
-        theme: 'btn-back-green',
-        name: 'Front-End Banking App',
-        description: 'Created a stylized ATM service enabling you to make a (fake) bank account to withdraw and deposit money. It utilizes reusable Bootstrap card components, is deployed with Amazon Web Services, and locally stores all user data.',
-        link: 'https://candace-ryanbankingapplication.s3.us-east-2.amazonaws.com/gitbankingapp/index.html#/',
-    },
+    // {
+    //     iconUrl: financial,
+    //     theme: 'btn-back-green',
+    //     name: 'Front-End Banking App',
+    //     description: 'Created a stylized ATM service enabling you to make a (fake) bank account to withdraw and deposit money. It utilizes reusable Bootstrap card components, is deployed with Amazon Web Services, and locally stores all user data.',
+    //     link: 'https://candace-ryanbankingapplication.s3.us-east-2.amazonaws.com/gitbankingapp/index.html#/',
+    // },
     // {
     //     iconUrl: snapgram,
     //     theme: 'btn-back-blue',
